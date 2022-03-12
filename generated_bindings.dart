@@ -25,4 +25,36 @@ class NativeLibrary {
   late final _hello_worldPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function()>>('hello_world');
   late final _hello_world = _hello_worldPtr.asFunction<void Function()>();
+
+  SpecialNumbers get_special_numbers() {
+    return _get_special_numbers();
+  }
+
+  late final _get_special_numbersPtr =
+      _lookup<ffi.NativeFunction<SpecialNumbers Function()>>(
+          'get_special_numbers');
+  late final _get_special_numbers =
+      _get_special_numbersPtr.asFunction<SpecialNumbers Function()>();
+
+  int check_special_numbers(
+    SpecialNumbers numbers,
+  ) {
+    return _check_special_numbers(
+      numbers,
+    );
+  }
+
+  late final _check_special_numbersPtr =
+      _lookup<ffi.NativeFunction<ffi.Int32 Function(SpecialNumbers)>>(
+          'check_special_numbers');
+  late final _check_special_numbers =
+      _check_special_numbersPtr.asFunction<int Function(SpecialNumbers)>();
+}
+
+class SpecialNumbers extends ffi.Struct {
+  @ffi.Int32()
+  external int number1;
+
+  @ffi.Float()
+  external double number2;
 }
