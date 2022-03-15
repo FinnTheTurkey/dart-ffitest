@@ -7,3 +7,5 @@ build/
 webbuild/
 csrc/build/
 csrc/embuild/
+
+.cache

@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/finn/Dart/ffitest/csrc/embuild",
+  "command": "/home/finn/Downloads/emsdk/upstream/emscripten/emcc    -lembind -s LLD_REPORT_UNDEFINED --shell-file ../shell.html -o CMakeFiles/hello_library.dir/hello.c.o -c /home/finn/Dart/ffitest/csrc/hello.c",
+  "file": "/home/finn/Dart/ffitest/csrc/hello.c"
+},
+{
+  "directory": "/home/finn/Dart/ffitest/csrc/embuild",
+  "command": "/home/finn/Downloads/emsdk/upstream/emscripten/em++    -lembind -s LLD_REPORT_UNDEFINED --shell-file ../shell.html -o CMakeFiles/hello_library.dir/bindings.cpp.o -c /home/finn/Dart/ffitest/csrc/bindings.cpp",
+  "file": "/home/finn/Dart/ffitest/csrc/bindings.cpp"
+},
+{
+  "directory": "/home/finn/Dart/ffitest/csrc/embuild",
+  "command": "/home/finn/Downloads/emsdk/upstream/emscripten/emcc    -lembind -s LLD_REPORT_UNDEFINED --shell-file ../shell.html -o CMakeFiles/hello_test.dir/hello.c.o -c /home/finn/Dart/ffitest/csrc/hello.c",
+  "file": "/home/finn/Dart/ffitest/csrc/hello.c"
+},
+{
+  "directory": "/home/finn/Dart/ffitest/csrc/embuild",
+  "command": "/home/finn/Downloads/emsdk/upstream/emscripten/em++    -lembind -s LLD_REPORT_UNDEFINED --shell-file ../shell.html -o CMakeFiles/hello_test.dir/bindings.cpp.o -c /home/finn/Dart/ffitest/csrc/bindings.cpp",
+  "file": "/home/finn/Dart/ffitest/csrc/bindings.cpp"
+}
+]

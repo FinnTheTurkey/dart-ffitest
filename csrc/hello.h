@@ -17,6 +17,10 @@ struct SpecialNumbers get_special_numbers();
 
 int check_special_numbers(struct SpecialNumbers numbers);
 
+struct SpecialNumbers *get_pointer();
+
+int check_pointer(struct SpecialNumbers *ptr);
+
 #ifdef __cplusplus
 }
 #endif

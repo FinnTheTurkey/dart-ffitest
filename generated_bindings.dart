@@ -49,6 +49,30 @@ class NativeLibrary {
           'check_special_numbers');
   late final _check_special_numbers =
       _check_special_numbersPtr.asFunction<int Function(SpecialNumbers)>();
+
+  ffi.Pointer<SpecialNumbers> get_pointer() {
+    return _get_pointer();
+  }
+
+  late final _get_pointerPtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<SpecialNumbers> Function()>>(
+          'get_pointer');
+  late final _get_pointer =
+      _get_pointerPtr.asFunction<ffi.Pointer<SpecialNumbers> Function()>();
+
+  int check_pointer(
+    ffi.Pointer<SpecialNumbers> ptr,
+  ) {
+    return _check_pointer(
+      ptr,
+    );
+  }
+
+  late final _check_pointerPtr = _lookup<
+          ffi.NativeFunction<ffi.Int32 Function(ffi.Pointer<SpecialNumbers>)>>(
+      'check_pointer');
+  late final _check_pointer =
+      _check_pointerPtr.asFunction<int Function(ffi.Pointer<SpecialNumbers>)>();
 }
 
 class SpecialNumbers extends ffi.Struct {

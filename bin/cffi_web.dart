@@ -11,6 +11,9 @@ external SpecialNumbers __get_special_numbers();
 @JS("Module.check_special_numbers")
 external int __check_special_numbers(SpecialNumbers numbers);
 
+@JS("Module.get_pointer")
+external int __get_pointer();
+
 class NativeLibrary {
   NativeLibrary();
 
@@ -31,6 +34,11 @@ class NativeLibrary {
 class SpecialNumbers {
   external int number1;
   external double number2;
+}
+
+class Pointer<U> {
+  int location;
+  Pointer(this.location);
 }
 
 NativeLibrary createNativeLibrary() {

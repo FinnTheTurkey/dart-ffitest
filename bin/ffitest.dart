@@ -6,4 +6,5 @@ void main(List<String> arguments) {
   var sn = native.get_special_numbers();
   print(sn);
   print(native.check_special_numbers(sn));
+  print("With pointer:");
 }
